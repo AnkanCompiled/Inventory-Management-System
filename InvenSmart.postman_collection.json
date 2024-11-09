@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "f4f98c5b-9be7-4f33-8e2f-dfc68e682bfc",
+		"name": "InvenSmart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37721606"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ankan\",\r\n    \"password\": \"ankan\",\r\n    \"role\": \"admin\",\r\n    \"email\": \"ankan@gmail.com\",\r\n    \"fullname\": \"Ankan Biswas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ankan\",\r\n    \"password\": \"ankan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"address\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"zipCode\": \"string\",\r\n    \"country\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Get Supplier",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"address\": \"string\",\r\n    \"city\": \"string\",\r\n    \"state\": \"string\",\r\n    \"zipCode\": \"string\",\r\n    \"country\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryName\": \"Books\",\r\n  \"description\": \"A collection of fiction and non-fiction literature\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYW5rYW4iLCJwYXNzd29yZCI6IiQyYSQxMCRDY3A1MGNmTUE3ZjlKdk9Ka3N5WDRlWjUwaDAzMWlTandpM0RsdU1tRXNCL2J5WS5uUUE2TyIsImVtYWlsIjoiYW5rYW5AZ21haWwuY29tIiwiZnVsbG5hbWUiOiJBbmthbiBCaXN3YXMiLCJjcmVhdGVkX2F0IjoiMjAyNC0xMC0wNVQwODo0NTo1Mi4wMDBaIiwicm9sZSI6ImFkbWluIn1dLCJpYXQiOjE3MjkzMzczMTUsImV4cCI6MTcyOTM0MDkxNX0.WC9ZR98YXSrErse2XuibFh4-Hy4RYYTywAxGdp0XbZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/categories/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Television\",\r\n    \"categoryId\": 1,\r\n    \"supplierId\": 1,\r\n    \"quantityInStock\": 10,\r\n    \"price\": 40000.00,\r\n    \"description\": \"TVs feature smart capabilities powered by Tizen OS, allowing users to stream content from popular apps like Netflix, Hulu, and Disney+, as well as access voice control through Bixby, Google Assistant, or Amazon Alexa. Samsung TVs also include various picture and sound enhancements, such as HDR10+ support and object-tracking sound for an immersive experience. Premium models often feature features like 8K resolution, ultra-thin bezels, and high refresh rates for smoother motion in sports and gaming.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYW5rYW4iLCJwYXNzd29yZCI6IiQyYSQxMCRDY3A1MGNmTUE3ZjlKdk9Ka3N5WDRlWjUwaDAzMWlTandpM0RsdU1tRXNCL2J5WS5uUUE2TyIsImVtYWlsIjoiYW5rYW5AZ21haWwuY29tIiwiZnVsbG5hbWUiOiJBbmthbiBCaXN3YXMiLCJjcmVhdGVkX2F0IjoiMjAyNC0xMC0wNVQwODo0NTo1Mi4wMDBaIiwicm9sZSI6ImFkbWluIn1dLCJpYXQiOjE3MjkzNjA2MjUsImV4cCI6MTcyOTM2NDIyNX0.02rwzsGRv1XtfTfMacABe4ZwoODbE96XuDKLbFFHad4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Television\",\r\n    \"categoryId\": 1,\r\n    \"supplierId\": 1,\r\n    \"quantityInStock\": 9,\r\n    \"price\": 40000.00,\r\n    \"description\": \"TVs feature smart capabilities powered by Tizen OS, allowing users to stream content from popular apps like Netflix, Hulu, and Disney+, as well as access voice control through Bixby, Google Assistant, or Amazon Alexa. Samsung TVs also include various picture and sound enhancements, such as HDR10+ support and object-tracking sound for an immersive experience. Premium models often feature features like 8K resolution, ultra-thin bezels, and high refresh rates for smoother motion in sports and gaming.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYW5rYW4iLCJwYXNzd29yZCI6IiQyYSQxMCRDY3A1MGNmTUE3ZjlKdk9Ka3N5WDRlWjUwaDAzMWlTandpM0RsdU1tRXNCL2J5WS5uUUE2TyIsImVtYWlsIjoiYW5rYW5AZ21haWwuY29tIiwiZnVsbG5hbWUiOiJBbmthbiBCaXN3YXMiLCJjcmVhdGVkX2F0IjoiMjAyNC0xMC0wNVQwODo0NTo1Mi4wMDBaIiwicm9sZSI6ImFkbWluIn1dLCJpYXQiOjE3MjkzNTg4NTEsImV4cCI6MTcyOTM2MjQ1MX0.RUY1tzrV2ie7zCMlA7nD-4_JR-eSU25jWRaxOReDBIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Get Transaction",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYW5rYW4iLCJwYXNzd29yZCI6IiQyYSQxMCRDY3A1MGNmTUE3ZjlKdk9Ka3N5WDRlWjUwaDAzMWlTandpM0RsdU1tRXNCL2J5WS5uUUE2TyIsImVtYWlsIjoiYW5rYW5AZ21haWwuY29tIiwiZnVsbG5hbWUiOiJBbmthbiBCaXN3YXMiLCJjcmVhdGVkX2F0IjoiMjAyNC0xMC0wNVQwODo0NTo1Mi4wMDBaIiwicm9sZSI6ImFkbWluIn1dLCJpYXQiOjE3MjkzNjA2MjUsImV4cCI6MTcyOTM2NDIyNX0.02rwzsGRv1XtfTfMacABe4ZwoODbE96XuDKLbFFHad4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"customerId\": \"integer\",\r\n\"transactionDate\": \"datetime\",\r\n\"totalAmount\": \"decimal\",\r\n\"items\": [\r\n{\r\n\"productId\": \"integer\",\r\n\"quantity\": \"integer\",\r\n\"unitPrice\": \"decimal\"\r\n}\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory Adjustments",
+			"item": [
+				{
+					"name": "Add Adjustment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"productId\": \"integer\",\r\n\"adjustmentType\": \"string\", // 'Increase' or 'Decrease'\r\n\"quantityChanged\": \"integer\",\r\n\"reason\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/inventory/adjustments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventory",
+								"adjustments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
