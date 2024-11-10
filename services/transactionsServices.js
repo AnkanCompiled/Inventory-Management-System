@@ -1,5 +1,7 @@
 import db from "../config/dbConnect.js";
 import AppError from "../errors/AppError.js";
+import createPDF from "./pdfService.js";
+import emailService from "../services/emailService.js";
 
 async function getService() {
   try {
@@ -35,6 +37,13 @@ async function addService(customerId, transactionDate, totalAmount, items) {
         ]
       );
     }
+    let data = { totalAmount, items };
+    await createPDF(data);
+    const [customer] = await db.execute(
+      "SELECT * FROM Customers WHERE customerId = ?",
+      [customerId]
+    );
+    emailService.sendInvoice(customer[0], transactionDate);
     await conn.commit();
     return result.insertId;
   } catch (error) {

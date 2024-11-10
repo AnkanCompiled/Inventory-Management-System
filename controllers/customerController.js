@@ -36,7 +36,7 @@ async function addCustomer(req, res, next) {
         req.body.zipCode,
         req.body.country
       );
-      res.status(201).json({
+      await res.status(201).json({
         message: "Customer added successfully",
         customerId: customerId,
       });

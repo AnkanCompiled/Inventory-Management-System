@@ -34,7 +34,7 @@ async function addService(
   } catch (error) {
     await conn.rollback();
     console.log(error);
-    throw new AppError("Customer Adding Error", 400);
+    throw new AppError(error.message, 400);
   } finally {
     conn.release();
   }

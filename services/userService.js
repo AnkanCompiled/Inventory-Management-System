@@ -3,6 +3,7 @@ import AppError from "../errors/AppError.js";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { jwtSecret } from "../config/env.js";
+import emailService from "../services/emailService.js";
 
 async function registerService(username, password, role, email, fullname) {
   const hashedPassword = await bcryptjs.hash(password, 10);
@@ -13,6 +14,7 @@ async function registerService(username, password, role, email, fullname) {
       "INSERT INTO Users (username, password, role, email, fullname) VALUES (?, ?, ?, ?, ?)",
       [username, hashedPassword, role, email, fullname]
     );
+    emailService.sendMail(email, fullname);
     await conn.commit();
     return result.insertId;
   } catch (error) {
